@@ -98,7 +98,7 @@ ntiros %>% mutate(En_descenso = case_when(
                     TRUE ~ 'No descenso')) %>%
   ggplot(aes(x=Rk, y=tiros, label=Equipo_contrario, color=En_descenso)) +
   geom_point()  +
-  geom_text_repel(size = 3) +  theme_light()
+  geom_text_repel(size = 3) +  theme_light() + ggtitle("Tiros frente a clasificación")
 
 df %>% ggplot(aes(x=xg)) + geom_histogram() +  theme_light()
 
